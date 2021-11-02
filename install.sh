@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-cd $HOME/MiLaNo
+cd $HOME/MiLaNoTeaM
 install() {
 rm -rf $HOME/.telegram-cli
 sudo chmod +x tg
-chmod +x MiLaNo
+chmod +x MiLaNoTeaM
 chmod +x ts
 ./ts
 }
@@ -48,7 +48,7 @@ fi
 installall
 cd ..
 rm -rf luarocks*
-cd MiLaNo
+cd MiLaNoTeaM
 rm -rf luarocks*
 lua start.lua
 
