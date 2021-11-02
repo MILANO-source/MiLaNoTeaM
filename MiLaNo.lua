@@ -11,7 +11,7 @@ https   = require("ssl.https")
 sudos   = dofile("sudo.lua")
 bot_id  = token:match("(%d+)")  
 Id_Sudo = Sudo
-List_Sudos = {Id_Sudo,970017493,665877797}
+List_Sudos = {Id_Sudo,932565396,772538035}
 User = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '')
 print("\27[34m"..[[>> Your bot has been activated on the MiLaNo source]].."\27[m")
 io.popen("mkdir MiLaNo_Files")
@@ -142,9 +142,9 @@ end
 return var
 end 
 function Rank_Checking(user_id,chat_id)
-if tonumber(user_id) == tonumber(970017493) then  
+if tonumber(user_id) == tonumber(932565396) then  
 var = true  
-elseif tonumber(user_id) == tonumber(665877797) then
+elseif tonumber(user_id) == tonumber(772538035) then
 var = true  
 elseif tonumber(user_id) == tonumber(Id_Sudo) then
 var = true  
@@ -172,9 +172,9 @@ end
 return var
 end 
 function Get_Rank(user_id,chat_id)
-if tonumber(user_id) == tonumber(970017493) then  
-var = 'مطور السورس'
-elseif tonumber(user_id) == tonumber(665877797) then  
+if tonumber(user_id) == tonumber(932565396) then  
+var = 'SHaHuM'
+elseif tonumber(user_id) == tonumber(772538035) then  
 var = "مطور السورس"  
 elseif DevMiLaNoe(user_id) == true then
 var = "المطور الاساسي"  
@@ -488,9 +488,9 @@ end
 function Reply_Status(msg,user_id,status,text)
 tdcli_function ({ID = "GetUser",user_id_ = user_id},function(arg,data) 
 if data.first_name_ ~= false then
-local UserName = (data.username_ or "Fbbbbb")
-local NameUser = "[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/FBBBBB)\n — — — — — — — — —\n❈︙بواسطه -› ["..data.first_name_.."](T.me/"..UserName..")"
-local NameUserr = "[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/FBBBBB)\n — — — — — — — — —\n❈︙اسم المستخدم -› ["..data.first_name_.."](T.me/"..UserName..")"
+local UserName = (data.username_ or "trr8t")
+local NameUser = "[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/trr8t)\n — — — — — — — — —\n❈︙بواسطه -› ["..data.first_name_.."](T.me/"..UserName..")"
+local NameUserr = "[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/trr8t)\n — — — — — — — — —\n❈︙اسم المستخدم -› ["..data.first_name_.."](T.me/"..UserName..")"
 if status == "lock" then
 send(msg.chat_id_, msg.id_,NameUser.."\n"..text.."\n— — — — — — — — —\n❈︙تم تنفيذ الامر بخاصيه ( المسح )\n")
 return false
@@ -2770,11 +2770,11 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendSticker?chat_id=' .. msg.chat_id_ .. '&sticker='..URL.escape("https://t.me/Channel_The_Quran/99").."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true")
 return false 
 end
-if result.id_ == tonumber(970017493) then
+if result.id_ == tonumber(932565396) then
 send(msg.chat_id_, msg.id_, "❈︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
-if result.id_ == tonumber(665877797) then
+if result.id_ == tonumber(772538035) then
 send(msg.chat_id_, msg.id_, "❈︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -2798,11 +2798,11 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendSticker?chat_id=' .. msg.chat_id_ .. '&sticker='..URL.escape("https://t.me/Channel_The_Quran/99").."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true")
 return false 
 end
-if tonumber(userid) == tonumber(970017493) then
+if tonumber(userid) == tonumber(932565396) then
 send(msg.chat_id_, msg.id_, "❈︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
-if tonumber(userid) == tonumber(665877797) then
+if tonumber(userid) == tonumber(772538035) then
 send(msg.chat_id_, msg.id_, "❈︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -3582,19 +3582,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local MiLaNort = database:get(bot_id.."MiLaNo:Comd:New:rt:bot:"..RTPA..msg.chat_id_)
 if MiLaNort == "مميز" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/FBBBBB)\n — — — — — — — — —\n❈︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "FBBBBB")..")".."\n❈︙تم رفعه "..RTPA.." هنا\n")
+send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/trr8t)\n — — — — — — — — —\n❈︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "trr8t")..")".."\n❈︙تم رفعه "..RTPA.." هنا\n")
 database:set(bot_id.."MiLaNo:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,RTPA) 
 database:sadd(bot_id.."MiLaNo:Special:User"..msg.chat_id_,result.sender_user_id_)  
 elseif MiLaNort == "ادمن" and Owner(msg) then 
-send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/FBBBBB)\n — — — — — — — — —\n❈︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "FBBBBB")..")".."\n❈︙تم رفعه "..RTPA.." هنا\n")
+send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/trr8t)\n — — — — — — — — —\n❈︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "trr8t")..")".."\n❈︙تم رفعه "..RTPA.." هنا\n")
 database:set(bot_id.."MiLaNo:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,RTPA)
 database:sadd(bot_id.."MiLaNo:Mod:User"..msg.chat_id_,result.sender_user_id_)  
 elseif MiLaNort == "مدير" and Constructor(msg) then
-send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/FBBBBB)\n — — — — — — — — —\n❈︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "FBBBBB")..")".."\n❈︙تم رفعه "..RTPA.." هنا\n")
+send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/trr8t)\n — — — — — — — — —\n❈︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "trr8t")..")".."\n❈︙تم رفعه "..RTPA.." هنا\n")
 database:set(bot_id.."MiLaNo:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,RTPA)  
 database:sadd(bot_id.."MiLaNo:Manager"..msg.chat_id_,result.sender_user_id_)  
 elseif MiLaNort == "عضو" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/FBBBBB)\n — — — — — — — — —\n❈︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "FBBBBB")..")".."\n❈︙تم رفعه "..RTPA.." هنا\n")
+send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/trr8t)\n — — — — — — — — —\n❈︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "trr8t")..")".."\n❈︙تم رفعه "..RTPA.." هنا\n")
 end
 end,nil)   
 end   
@@ -3617,19 +3617,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local MiLaNort = database:get(bot_id.."MiLaNo:Comd:New:rt:bot:"..RTPA..msg.chat_id_)
 if MiLaNort == "مميز" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/FBBBBB)\n — — — — — — — — —\n❈︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "FBBBBB")..")".."\n❈︙تم تنزيله من "..RTPA.." هنا\n")  
+send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/trr8t)\n — — — — — — — — —\n❈︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "trr8t")..")".."\n❈︙تم تنزيله من "..RTPA.." هنا\n")  
 database:srem(bot_id.."MiLaNo:Special:User"..msg.chat_id_,result.sender_user_id_)  
 database:del(bot_id.."MiLaNo:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif MiLaNort == "ادمن" and Owner(msg) then 
-send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/FBBBBB)\n — — — — — — — — —\n❈︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "FBBBBB")..")".."\n❈︙تم تنزيله من "..RTPA.." هنا\n")  
+send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/trr8t)\n — — — — — — — — —\n❈︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "trr8t")..")".."\n❈︙تم تنزيله من "..RTPA.." هنا\n")  
 database:srem(bot_id.."MiLaNo:Mod:User"..msg.chat_id_,result.sender_user_id_) 
 database:del(bot_id.."MiLaNo:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif MiLaNort == "مدير" and Constructor(msg) then
-send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/FBBBBB)\n — — — — — — — — —\n❈︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "FBBBBB")..")".."\n❈︙تم تنزيله من "..RTPA.." هنا\n")  
+send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/trr8t)\n — — — — — — — — —\n❈︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "trr8t")..")".."\n❈︙تم تنزيله من "..RTPA.." هنا\n")  
 database:srem(bot_id.."MiLaNo:Manager"..msg.chat_id_,result.sender_user_id_)  
 database:del(bot_id.."MiLaNo:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif MiLaNort == "عضو" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/FBBBBB)\n — — — — — — — — —\n❈︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "FBBBBB")..")".."\n❈︙تم تنزيله من "..RTPA.." هنا\n")  
+send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/trr8t)\n — — — — — — — — —\n❈︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "trr8t")..")".."\n❈︙تم تنزيله من "..RTPA.." هنا\n")  
 end
 end,nil)   
 end   
@@ -3652,19 +3652,19 @@ function py_username(extra, result, success)
 if result.id_ then
 local MiLaNort = database:get(bot_id.."MiLaNo:Comd:New:rt:bot:"..text1[2]..msg.chat_id_)
 if MiLaNort == "مميز" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/FBBBBB)\n — — — — — — — — —\n❈︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "FBBBBB")..")".."\n❈︙تم رفعه "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/trr8t)\n — — — — — — — — —\n❈︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "trr8t")..")".."\n❈︙تم رفعه "..text1[2].." هنا")   
 database:sadd(bot_id.."MiLaNo:Special:User"..msg.chat_id_,result.id_)  
 database:set(bot_id.."MiLaNo:Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif MiLaNort == "ادمن" and Owner(msg) then 
-send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/FBBBBB)\n — — — — — — — — —\n❈︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "FBBBBB")..")".."\n❈︙تم رفعه "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/trr8t)\n — — — — — — — — —\n❈︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "trr8t")..")".."\n❈︙تم رفعه "..text1[2].." هنا")   
 database:sadd(bot_id.."MiLaNo:Mod:User"..msg.chat_id_,result.id_)  
 database:set(bot_id.."MiLaNo:Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif MiLaNort == "مدير" and Constructor(msg) then
-send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/FBBBBB)\n — — — — — — — — —\n❈︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "FBBBBB")..")".."\n❈︙تم رفعه "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/trr8t)\n — — — — — — — — —\n❈︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "trr8t")..")".."\n❈︙تم رفعه "..text1[2].." هنا")   
 database:sadd(bot_id.."MiLaNo:Manager"..msg.chat_id_,result.id_)  
 database:set(bot_id.."MiLaNo:Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif MiLaNort == "عضو" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/FBBBBB)\n — — — — — — — — —\n❈︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "FBBBBB")..")".."\n❈︙تم رفعه "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/trr8t)\n — — — — — — — — —\n❈︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "trr8t")..")".."\n❈︙تم رفعه "..text1[2].." هنا")   
 end
 else
 info = "❈︙المعرف غلط"
@@ -3690,19 +3690,19 @@ function py_username(extra, result, success)
 if result.id_ then
 local MiLaNort = database:get(bot_id.."MiLaNo:Comd:New:rt:bot:"..text1[2]..msg.chat_id_)
 if MiLaNort == "مميز" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/FBBBBB)\n — — — — — — — — —\n❈︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "FBBBBB")..")".."\n❈︙تم تنريله من "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/trr8t)\n — — — — — — — — —\n❈︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "trr8t")..")".."\n❈︙تم تنريله من "..text1[2].." هنا")   
 database:srem(bot_id.."MiLaNo:Special:User"..msg.chat_id_,result.id_)  
 database:del(bot_id.."MiLaNo:Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif MiLaNort == "ادمن" and Owner(msg) then 
-send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/FBBBBB)\n — — — — — — — — —\n❈︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "FBBBBB")..")".."\n❈︙تم تنريله من "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/trr8t)\n — — — — — — — — —\n❈︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "trr8t")..")".."\n❈︙تم تنريله من "..text1[2].." هنا")   
 database:srem(bot_id.."MiLaNo:Mod:User"..msg.chat_id_,result.id_)  
 database:del(bot_id.."MiLaNo:Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif MiLaNort == "مدير" and Constructor(msg) then
-send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/FBBBBB)\n — — — — — — — — —\n❈︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "FBBBBB")..")".."\n❈︙تم تنريله من "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/trr8t)\n — — — — — — — — —\n❈︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "trr8t")..")".."\n❈︙تم تنريله من "..text1[2].." هنا")   
 database:srem(bot_id.."MiLaNo:Manager"..msg.chat_id_,result.id_)  
 database:del(bot_id.."MiLaNo:Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif MiLaNort == "عضو" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/FBBBBB)\n — — — — — — — — —\n❈︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "FBBBBB")..")".."\n❈︙تم تنريله من "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/trr8t)\n — — — — — — — — —\n❈︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "trr8t")..")".."\n❈︙تم تنريله من "..text1[2].." هنا")   
 end
 else
 info = "❈︙المعرف غلط"
@@ -3728,11 +3728,11 @@ send(msg.chat_id_, msg.id_,'❈︙لقد تم تعطيل الحظر و الطر�
 return false
 end
 function Function_MiLaNo(extra, result, success)
-if result.sender_user_id_ == tonumber(970017493) then
+if result.sender_user_id_ == tonumber(932565396) then
 send(msg.chat_id_, msg.id_, "❈︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
-if result.sender_user_id_ == tonumber(665877797) then
+if result.sender_user_id_ == tonumber(772538035) then
 send(msg.chat_id_, msg.id_, "❈︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -3797,7 +3797,7 @@ return false
 end
 function Function_MiLaNo(extra, result, success)
 if result.id_ then
-if result.id_ == tonumber(665877797) then
+if result.id_ == tonumber(772538035) then
 send(msg.chat_id_, msg.id_, "❈︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -3805,7 +3805,7 @@ if result.id_ == tonumber(Id_Sudo) then
 send(msg.chat_id_, msg.id_, "❈︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور البوت \n")
 return false 
 end
-if result.id_ == tonumber(970017493) then
+if result.id_ == tonumber(932565396) then
 send(msg.chat_id_, msg.id_, "❈︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -3857,11 +3857,11 @@ if userid == tonumber(Id_Sudo) then
 send(msg.chat_id_, msg.id_, "❈︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور البوت \n")
 return false 
 end
-if userid == tonumber(970017493) then
+if userid == tonumber(932565396) then
 send(msg.chat_id_, msg.id_, "❈︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
-if userid == tonumber(665877797) then
+if userid == tonumber(772538035) then
 send(msg.chat_id_, msg.id_, "❈︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -3967,11 +3967,11 @@ end
 return false
 end
 function Function_MiLaNo(extra, result, success)
-if result.sender_user_id_ == tonumber(970017493) then
+if result.sender_user_id_ == tonumber(932565396) then
 send(msg.chat_id_, msg.id_, "❈︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس  \n")
 return false 
 end
-if result.sender_user_id_ == tonumber(665877797) then
+if result.sender_user_id_ == tonumber(772538035) then
 send(msg.chat_id_, msg.id_, "❈︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس  \n")
 return false 
 end
@@ -4010,7 +4010,7 @@ return false
 end
 function Function_MiLaNo(extra, result, success)
 if result.id_ then
-if result.id_ == tonumber(970017493) then
+if result.id_ == tonumber(932565396) then
 send(msg.chat_id_, msg.id_, "❈︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -4042,7 +4042,7 @@ end
 return false
 end
 local userid = text:match("^كتم (%d+)$")
-if userid == tonumber(970017493) then
+if userid == tonumber(932565396) then
 send(msg.chat_id_, msg.id_, "❈︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -6558,7 +6558,7 @@ if b.first_name_ == false then
 send(msg.chat_id_, msg.id_,"❈︙ حساب المنشئ محذوف")
 return false  
 end
-local UserName = (b.username_ or "Fbbbbb")
+local UserName = (b.username_ or "trr8t")
 send(msg.chat_id_, msg.id_,"❈︙منشئ المجموعه ~ ["..b.first_name_.."](T.me/"..UserName..")")  
 end,nil)   
 end
@@ -6578,7 +6578,7 @@ if b.first_name_ == false then
 send(msg.chat_id_, msg.id_,"❈︙حساب المنشئ محذوف")
 return false  
 end
-local UserName = (b.username_ or "Fbbbbb")
+local UserName = (b.username_ or "trr8t")
 send(msg.chat_id_, msg.id_,"❈︙تم ترقية منشئ المجموعه ~ ["..b.first_name_.."](T.me/"..UserName..")")  
 database:sadd(bot_id.."creator"..msg.chat_id_,b.id_)
 end,nil)   
@@ -8622,17 +8622,17 @@ dofile("MiLaNo.lua")
 send(msg.chat_id_, msg.id_, "❈︙تم التحديث")
 end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then  
-local url,res = https.request('https://black-source.tk/BlackTeAM/ChatMember.php?id='..msg.sender_user_id_)
+local url,res = https.request('https://shahum.ml/subscrib-source/MILANO-source/ashtrak.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.info ~= true then
-send(msg.chat_id_,msg.id_,'❈︙شترك في قناة السورس اولآ @fBBBBB .')   
+send(msg.chat_id_,msg.id_,'❈︙شترك في قناة السورس اولآ @trr8t .')   
 return false 
 end
 key = {
-{{text = '- 𝘉𝘭𝘢𝘤𝘬 𝘛𝘦𝘢𝘮 .',url="t.me/FBBBBB"}},
-{{text = '- 𝘊𝘢𝘭𝘭 𝘜𝘴 .',url="t.me/TwSLMiLaNoBot"}},
+{{text = '- MiLaNo SouRce .',url="t.me/trr8t"}},
+{{text = '- 𝘊𝘢𝘭𝘭 𝘜𝘴 .',url="t.me/nnlnnn"}},
 }
-send_inline_key(msg.chat_id_,"*- 𝘞𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 𝘵𝘩𝘦 𝘣𝘭𝘢𝘤𝘬 𝘴𝘰𝘶𝘳𝘤𝘦 .*",nil,key,msg.id_/2097152/0.5)
+send_inline_key(msg.chat_id_,"*- 𝘞𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 𝘵𝘩𝘦 SouRce MiLaNo .*",nil,key,msg.id_/2097152/0.5)
 end
 if text == 'رابط الحذف' or text == 'بوت الحذف' then  
 if AddChannel(msg.sender_user_id_) == false then
@@ -8679,7 +8679,7 @@ Text = [[
 ❈︙ م4 -› لعرض اوامر المنشئين
 ❈︙ م5 -› لعرض اوامر المطورين
  — — — — — — — — — 
-[❈︙Ch Source](t.me/fBBBBB)
+[❈︙Ch Source](t.me/trr8t)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -8726,7 +8726,7 @@ Text = [[
 ❈︙الكلايش
 ❈︙السيلفي
  — — — — — — — — — 
-[❈︙Ch Source](t.me/fBBBBB)
+[❈︙Ch Source](t.me/trr8t)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -8798,7 +8798,7 @@ Text = [[
 ❈︙مسح الصلاحيات
 ❈︙مسح الرابط
  — — — — — — — — — 
-[❈︙Ch Source](t.me/fBBBBB)
+[❈︙Ch Source](t.me/trr8t)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -8845,7 +8845,7 @@ Text = [[
 ❈︙تفعيل/تعطيل اوامر التحشيش
 ❈︙تفعيل/تعطيل الرابط/جلب الرابط
  — — — — — — — — — 
-[❈︙Ch Source](t.me/fBBBBB)
+[❈︙Ch Source](t.me/trr8t)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -8881,7 +8881,7 @@ Text = [[
 ❈︙اضف رسائل + العدد بالرد
 ❈︙اضف مجوهرات + العدد بالرد
  — — — — — — — — — 
-[❈︙Ch Source](t.me/fBBBBB)
+[❈︙Ch Source](t.me/trr8t)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -8931,7 +8931,7 @@ Text = [[
 ❈︙رفع/تنزيل منشئ اساسي
 ❈︙مسح المنشئين الاساسين
  — — — — — — — — — 
-[❈︙Ch Source](t.me/fBBBBB)
+[❈︙Ch Source](t.me/trr8t)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -9475,7 +9475,7 @@ local A = io.open("sudo.lua", 'w')
 A:write([[
 s = "BGBBB"
 
-q = "FBBBBB"
+q = "trr8t"
 
 token = "]]..token..[["
 
@@ -9882,7 +9882,7 @@ gk = https.request('https://black-source.tk/BlackTeAM/Horoscopes.php?br='..URL.e
 br = JSON.decode(gk)
 x = {} 
 x.inline_keyboard = {
-{{text = '❈︙ MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/fBBBBB'}},
+{{text = '❈︙ MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/trr8t'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(br.ok.hso)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(x)) 
 end
@@ -9892,7 +9892,7 @@ local idchci = "-100"..idch
 local animation = DAata:match("^animation(.*)$"):gsub('chatid',''):gsub('chatid',''):gsub(idch,''):gsub('-100','')
 local Text ="❈︙تم اللغاء منعها بنجاح"
 inline = {
-{{text = '❈︙ MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/fBBBBB'}},
+{{text = '❈︙ MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/trr8t'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9903,7 +9903,7 @@ local idchci = database:get(bot_id.."MiLaNo:Filter:msg")
 local photo = DAata:match("^pito(.*)$")
 local Text ="❈︙تم اللغاء منعها بنجاح"
 inline = {
-{{text = '❈︙ MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/fBBBBB'}},
+{{text = '❈︙ MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/trr8t'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9915,7 +9915,7 @@ local idchci = "-100"..idch
 local Sticker = DAata:match("^Sticker(.*)$"):gsub('chatid',''):gsub('chatid',''):gsub(idch,''):gsub('-100','')
 local Text ="❈︙تم اللغاء منعه بنجاح"
 inline = {
-{{text = '❈︙ MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/fBBBBB'}},
+{{text = '❈︙ MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/trr8t'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9925,7 +9925,7 @@ if DAata and DAata:match("^delallSticker(.*)$") and Addictive(data) then
 local delallSticker = DAata:match("^delallSticker(.*)$")
 local Text ="❈︙تم اللغاء منع كل المتحركات"
 inline = {
-{{text = '❈︙ MiLaNo 𝖲𝗈𝗎𝗋𝖼??  .',url='http://t.me/fBBBBB'}},
+{{text = '❈︙ MiLaNo 𝖲𝗈𝗎𝗋𝖼??  .',url='http://t.me/trr8t'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9938,7 +9938,7 @@ if DAata and DAata:match("^delallanimation(.*)$") and Addictive(data) then
 local delallmation = DAata:match("^delallanimation(.*)$")
 local Text ="❈︙تم اللغاء منع كل المتحركات"
 inline = {
-{{text = '❈︙ MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/fBBBBB'}},
+{{text = '❈︙ MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/trr8t'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9951,7 +9951,7 @@ if DAata and DAata:match("^delallph(.*)$") and Addictive(data) then
 local delallph = DAata:match("^delallph(.*)$")
 local Text ="❈︙تم اللغاء منع كل الصور"
 inline = {
-{{text = '❈︙ MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/fBBBBB'}},
+{{text = '❈︙ MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/trr8t'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9976,7 +9976,7 @@ infovid = "*❈︙ اختر صيغه التنزيل الان*\n"
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'فيديو', callback_data=id_from_user..":DownloadVid:"..msgidrp..":"..id_from_vid..":Mp4"},{text = 'صوت', callback_data=id_from_user..":DownloadVid:"..msgidrp..":"..id_from_vid..":mp3"},{text = 'بصمه', callback_data=id_from_user..":DownloadVid:"..msgidrp..":"..id_from_vid..":ogg"}},
-{{text = '❈︙ MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/fBBBBB'}},
+{{text = '❈︙ MiLaNo 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/trr8t'}},
 }
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(infovid)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 InfoVid = https.request('https://black-source.tk/Api/BotYoutube.php?Id='..URL.escape(id_from_vid))
@@ -10415,14 +10415,16 @@ if (data.ID == "UpdateOption" and data.value_.value_ == "Ready") then
 print("\27[34m"..[[
 >> The Bot is Running
 >> Bot source > MiLaNo
->>Source channel > @FBBBBB
->>Source developer > @BGBBB
- ____  _        _    ____ _  __
-| __ )| |      / \  / ___| |/ /
-|  _ \| |     / _ \| |   | ' / 
-| |_) | |___ / ___ \ |___| . \ 
-|____/|_____/_/   \_\____|_|\_\
-
+>>Source channel > @trr8t
+>>Source developer > @TttttX
+  __  __ _ _           _   _       
+ |  \/  (_) |         | \ | |      
+ | \  / |_| |     __ _|  \| | ___  
+ | |\/| | | |    / _` | . ` |/ _ \ 
+ | |  | | | |____ (_| | |\  | (_) |
+ |_|  |_|_|______\__,_|_| \_|\___/ 
+                                   
+                                   
 ]].."\27[m")
 local list = database:smembers(bot_id..'MiLaNo:UsersBot')  
 for k,v in pairs(list) do 
